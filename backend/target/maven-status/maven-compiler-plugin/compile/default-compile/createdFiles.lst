@@ -1,7 +1,0 @@
-com/yanoosh/forkito/controller/HelloWorldController.class
-com/yanoosh/forkito/config/SecurityConfig.class
-com/yanoosh/forkito/repository/RecipeRepository.class
-com/yanoosh/forkito/controller/RecipeController.class
-com/yanoosh/forkito/model/Recipe.class
-com/yanoosh/forkito/service/RecipeService.class
-com/yanoosh/forkito/ForkitoApplication.class
