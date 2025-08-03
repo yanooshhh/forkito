@@ -1,12 +1,13 @@
 package com.yanoosh.forkito.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.yanoosh.forkito.enums.Difficulity;
+import com.yanoosh.forkito.enums.MealType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -21,5 +22,15 @@ public class Recipe {
     private String title;
 
     private String description;
+
+    @Enumerated(value = EnumType.STRING)
+    private Difficulity difficulity;
+
+    @Enumerated(value = EnumType.STRING)
+    private MealType mealType;
+
+    @OneToMany
+    @JoinColumn(name = "RECIPE_INGREDIENT_ID", nullable = false)
+    private List<RecipeIngredient> recipeIngredients;
 
 }
