@@ -1,6 +1,6 @@
 package com.yanoosh.forkito.controller;
 
-import com.yanoosh.forkito.model.Recipe;
+import com.yanoosh.forkito.entity.Recipe;
 import com.yanoosh.forkito.service.RecipeService;
 import org.springframework.web.bind.annotation.*;
 

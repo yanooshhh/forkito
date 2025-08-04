@@ -1,5 +1,10 @@
 package com.yanoosh.forkito.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum MealType {
     BREAKFAST("Breakfast"),
     LUNCH("Lunch"),
@@ -8,12 +13,4 @@ public enum MealType {
     DESSERT("Dessert");
 
     private final String description;
-
-    MealType(String description) {
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 }

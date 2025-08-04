@@ -1,7 +1,6 @@
-package com.yanoosh.forkito.model;
+package com.yanoosh.forkito.entity;
 
 import com.yanoosh.forkito.enums.MeasurementUnit;
-import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
@@ -30,5 +29,4 @@ public class Ingredient {
     @NotNull
     @Enumerated(value = jakarta.persistence.EnumType.STRING)
     private MeasurementUnit defaultMeasurementUnit;
-
 }

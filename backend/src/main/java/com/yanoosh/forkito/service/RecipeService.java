@@ -1,6 +1,6 @@
 package com.yanoosh.forkito.service;
 
-import com.yanoosh.forkito.model.Recipe;
+import com.yanoosh.forkito.entity.Recipe;
 import com.yanoosh.forkito.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
 

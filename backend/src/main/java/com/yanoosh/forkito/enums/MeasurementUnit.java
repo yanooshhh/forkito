@@ -1,5 +1,10 @@
 package com.yanoosh.forkito.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
 public enum MeasurementUnit {
     GRAMS("g"),
     KILOGRAMS("kg"),
@@ -10,12 +15,4 @@ public enum MeasurementUnit {
     PIECES("pcs");
 
     private final String abbreviation;
-
-    MeasurementUnit(String abbreviation) {
-        this.abbreviation = abbreviation;
-    }
-
-    public String getAbbreviation() {
-        return abbreviation;
-    }
 }

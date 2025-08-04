@@ -1,4 +1,4 @@
-package com.yanoosh.forkito.model;
+package com.yanoosh.forkito.entity;
 
 import com.yanoosh.forkito.enums.MeasurementUnit;
 import jakarta.persistence.*;
@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class RecipeIngredient {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne

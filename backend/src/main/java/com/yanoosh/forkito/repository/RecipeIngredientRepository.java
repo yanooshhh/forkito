@@ -1,6 +1,6 @@
 package com.yanoosh.forkito.repository;
 
-import com.yanoosh.forkito.model.RecipeIngredient;
+import com.yanoosh.forkito.entity.RecipeIngredient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
