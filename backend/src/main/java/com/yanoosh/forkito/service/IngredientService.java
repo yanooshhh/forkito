@@ -2,10 +2,10 @@ package com.yanoosh.forkito.service;
 
 import com.yanoosh.forkito.entity.Ingredient;
 import com.yanoosh.forkito.repository.IngredientRepository;
-import com.yanoosh.forkito.repository.RecipeIngredientRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class IngredientService {
@@ -20,7 +20,7 @@ public class IngredientService {
         return ingredientRepository.findAll();
     }
 
-    public Ingredient getIngredientById(Long id) {
+    public Ingredient getIngredientById(UUID id) {
         return ingredientRepository.findById(id).orElse(null);
     }
 
@@ -28,7 +28,7 @@ public class IngredientService {
         return ingredientRepository.save(ingredient);
     }
 
-    public void deleteIngredient(Long id) {
+    public void deleteIngredient(UUID id) {
         ingredientRepository.deleteById(id);
     }
 

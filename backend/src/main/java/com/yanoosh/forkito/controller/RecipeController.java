@@ -5,6 +5,7 @@ import com.yanoosh.forkito.service.RecipeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/recipes")
@@ -27,12 +28,12 @@ public class RecipeController {
     }
 
     @GetMapping("/{id}")
-    public Recipe getRecipeById(@PathVariable Long id) {
+    public Recipe getRecipeById(@PathVariable UUID id) {
         return recipeService.getRecipeById(id);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteRecipe(@PathVariable Long id) {
+    public void deleteRecipe(@PathVariable UUID id) {
         recipeService.deleteRecipe(id);
     }
 

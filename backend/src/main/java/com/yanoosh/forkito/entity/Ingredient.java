@@ -10,14 +10,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Ingredient {
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.UUID)
+    private UUID id;
 
     @NotNull
     private String name;

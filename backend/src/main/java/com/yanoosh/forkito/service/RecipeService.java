@@ -5,6 +5,7 @@ import com.yanoosh.forkito.repository.RecipeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class RecipeService {
@@ -19,7 +20,7 @@ public class RecipeService {
         return recipeRepository.findAll();
     }
 
-    public Recipe getRecipeById(Long id) {
+    public Recipe getRecipeById(UUID id) {
         return recipeRepository.findById(id).orElse(null);
     }
 
@@ -27,7 +28,7 @@ public class RecipeService {
         return recipeRepository.save(recipe);
     }
 
-    public void deleteRecipe(Long id) {
+    public void deleteRecipe(UUID id) {
         recipeRepository.deleteById(id);
     }
 }
