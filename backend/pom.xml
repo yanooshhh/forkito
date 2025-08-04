@@ -108,6 +108,59 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<!-- SQL Maven Plugin for database operations -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sql-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.postgresql</groupId>
+						<artifactId>postgresql</artifactId>
+						<version>42.7.2</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<driver>org.postgresql.Driver</driver>
+					<url>jdbc:postgresql://localhost:5432/postgres</url>
+					<username>user</username>
+					<password>pass</password>
+					<autocommit>true</autocommit>
+				</configuration>
+				<executions>
+					<execution>
+						<id>terminate-connections</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<autocommit>true</autocommit>
+							<delimiterType>row</delimiterType>
+							<keepFormat>true</keepFormat>
+							<srcFiles>
+								<srcFile>src/main/resources/db/terminate_connections.sql</srcFile>
+							</srcFiles>
+						</configuration>
+					</execution>
+					<execution>
+						<id>recreate-database</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<autocommit>true</autocommit>
+							<delimiterType>row</delimiterType>
+							<keepFormat>true</keepFormat>
+							<srcFiles>
+								<srcFile>src/main/resources/db/recreate_database.sql</srcFile>
+							</srcFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 

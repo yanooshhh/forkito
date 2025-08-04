@@ -12,6 +12,17 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+# Personal IntelliJ configurations that should not be shared
+.idea/dataSources.xml
+.idea/data_source_mapping.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/sqldialects.xml
+.idea/vcs.xml
+.idea/copilotDiffState.xml
+.idea/.gitignore
+.idea/IntelliLang.xml
+
 # AWS User-specific
 .idea/**/aws.xml
 
@@ -55,6 +66,11 @@ cmake-build-*/
 
 # IntelliJ
 out/
+
+# Allow run configurations to be tracked in git
+!.idea/runConfigurations/
+.idea/runConfigurations/*
+!.idea/runConfigurations/*.xml
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
